@@ -253,6 +253,49 @@ a {
   animation-delay: -2.6s;
 }
 
+.hero-visual-wrap {
+  min-height: 31rem;
+}
+
+.floating-symbol {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  min-width: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.7rem;
+  color: var(--foreground);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  animation: symbol-drift 6.5s ease-in-out infinite;
+}
+
+.floating-symbol-code {
+  left: -1.25rem;
+  top: 4.5rem;
+}
+
+.floating-symbol-braces {
+  right: -1rem;
+  top: 8.4rem;
+  animation-delay: -1.8s;
+}
+
+.floating-symbol-slash {
+  bottom: 5.7rem;
+  left: 0.2rem;
+  animation-delay: -3.1s;
+}
+
+.floating-symbol-dot {
+  right: 1rem;
+  bottom: 3.8rem;
+  animation-delay: -4.5s;
+}
+
 .typing-text {
   display: inline-block;
   width: 0;
@@ -315,6 +358,16 @@ a {
   }
 }
 
+@keyframes symbol-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+  }
+  50% {
+    transform: translate3d(0, -0.7rem, 0) rotate(2deg);
+  }
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -347,5 +400,49 @@ a {
 
   .glass-panel::after {
     animation: none;
+  }
+
+  .floating-symbol {
+    animation: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-visual-wrap {
+    min-height: 27rem;
+    max-width: 23rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-visual-wrap {
+    min-height: 24rem;
+    max-width: 19rem;
+  }
+
+  .floating-symbol {
+    min-width: 2.6rem;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.78rem;
+  }
+
+  .floating-symbol-code {
+    left: -0.65rem;
+    top: 3.4rem;
+  }
+
+  .floating-symbol-braces {
+    right: -0.55rem;
+    top: 7rem;
+  }
+
+  .floating-symbol-slash {
+    bottom: 4.6rem;
+    left: -0.2rem;
+  }
+
+  .floating-symbol-dot {
+    right: 0.35rem;
+    bottom: 3.1rem;
   }
 }

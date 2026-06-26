@@ -3,7 +3,6 @@ import { Collapsible } from '@base-ui/react/collapsible'
 import { Tabs } from '@base-ui/react/tabs'
 import {
   ArrowUpRight,
-  BriefcaseBusiness,
   GitBranch,
   Link,
   Mail,
@@ -134,23 +133,22 @@ function App() {
 
       <section
         id="top"
-        className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 px-5 pb-16 pt-12 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:pb-24 lg:pt-16"
+        className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-12 px-5 pb-16 pt-12 sm:px-8 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[1.04fr_0.96fr] lg:pb-24 lg:pt-10"
       >
-        <div className='max-w-500'>
+        <div className="max-w-3xl self-center">
           <div className="glass-pill mb-6 inline-flex items-center gap-2 px-3 py-1 text-sm text-muted-foreground">
-              Hi, I'm Alfred Francis
+            Hi, I'm Alfred Francis
           </div>
           <h1 className="max-w-3xl text-5xl font-semibold leading-tight text-foreground sm:text-6xl">
-            I build clean, fast interfaces that make products feel easier to
-            use.
+            Designing and building <br />user-focused digital experiences.
           </h1>
           <p className="mt-4 flex min-h-9 items-center text-2xl font-semibold text-primary sm:text-3xl">
             <span className="typing-text">Frontend experiences.</span>
           </p>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-            This is a portfolio starter built with Vite, React, shadcn, and
-            Base UI. Swap in your own projects, links, and bio as your work
-            grows.
+            I turn ideas into polished, responsive interfaces with careful
+            attention to motion, accessibility, and the small details that make
+            a product feel easy to use.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button nativeButton={false} render={<a href="#work" />} size="lg">
@@ -181,32 +179,26 @@ function App() {
           </dl>
         </div>
         
-        <div className="glass-panel floating-card relative w-80">
-          
-          <MovingLensLineArtHero
-            lineImage="/images/moving-line-art-amber.png"
-            maskImage="/images/moving-line-art-mask.png"
-          />
-          {/* <div className="glass-panel absolute inset-x-6 bottom-6 p-5 shadow-lg">
-            <div className="flex items-center gap-3">
-              <div className="grid size-11 place-items-center rounded-lg bg-primary text-primary-foreground">
-                <BriefcaseBusiness className="size-5" />
-              </div>
-              <div>
-                <p className="font-semibold">Available for selected work</p>
-                <p className="text-sm text-muted-foreground">
-                  Product UI, design systems, and frontend builds
-                </p>
-              </div>
-            </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-              <span className="rounded-md bg-muted px-3 py-2">Vite</span>
-              <span className="rounded-md bg-muted px-3 py-2">shadcn</span>
-              <span className="rounded-md bg-muted px-3 py-2">Base UI</span>
-              <span className="rounded-md bg-muted px-3 py-2">TypeScript</span>
-            </div>
-          </div> */}
-        
+        <div className="hero-visual-wrap relative mx-auto flex w-full max-w-[25rem] items-center justify-center self-center lg:justify-self-end">
+          <span className="floating-symbol floating-symbol-code glass-pill">
+            &lt;&gt;
+          </span>
+          <span className="floating-symbol floating-symbol-braces glass-pill">
+            {'{}'}
+          </span>
+          <span className="floating-symbol floating-symbol-slash glass-pill">
+            /&gt;
+          </span>
+          <span className="floating-symbol floating-symbol-dot glass-pill">
+            .ts
+          </span>
+
+          <div className="glass-panel floating-card relative w-full overflow-hidden">
+            <MovingLensLineArtHero
+              lineImage="/images/moving-line-art-amber.png"
+              maskImage="/images/moving-line-art-mask.png"
+            />
+          </div>
         </div>
 
       </section>
